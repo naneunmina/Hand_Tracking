@@ -22,10 +22,10 @@ with open(MODEL_PATH, "rb") as f:
 cap = cv2.VideoCapture(0)
 
 gestureImages = {
-  "FIST": cv2.imread("images/fist.png", cv2.IMREAD_UNCHANGED),
-  "THUMB": cv2.imread("images/thumb.png", cv2.IMREAD_UNCHANGED),
-  "V": cv2.imread("images/v.png", cv2.IMREAD_UNCHANGED),
-  "PALM": cv2.imread("images/palm.png", cv2.IMREAD_UNCHANGED)
+  "FIST": cv2.imread(os.path.join(BASE_DIR, "infer/images/fist.png"), cv2.IMREAD_UNCHANGED),
+  "THUMB": cv2.imread(os.path.join(BASE_DIR, "infer/images/thumb.png"), cv2.IMREAD_UNCHANGED),
+  "V": cv2.imread(os.path.join(BASE_DIR, "infer/images/v.png"), cv2.IMREAD_UNCHANGED),
+  "PALM": cv2.imread(os.path.join(BASE_DIR, "infer/images/palm.png"), cv2.IMREAD_UNCHANGED)
 }
 
 def extract_features(hand_landmarks):

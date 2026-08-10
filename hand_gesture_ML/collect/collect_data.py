@@ -5,7 +5,7 @@ import os
 import time
 
 # ===== 설정 =====
-GESTURE_LABEL = "PALM"   # ← 지금 수집할 제스처 이름
+GESTURE_LABEL = "THUMB"   # ← 지금 수집할 제스처 이름
 SAVE_PATH = f"dataset/{GESTURE_LABEL}.csv"
 SAMPLES = 200            # 수집할 샘플 수
 DELAY = 0.05             # 저장 간 딜레이 (초)

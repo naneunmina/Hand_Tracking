@@ -2,6 +2,9 @@ import cv2
 import mediapipe as mp
 import time
 import numpy as np
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 mp_hands = mp.solutions.hands
 mp_draw = mp.solutions.drawing_utils
@@ -9,9 +12,9 @@ mp_draw = mp.solutions.drawing_utils
 cap = cv2.VideoCapture(0)
 
 gestureImages = {
-    "FIST": cv2.imread("images/fist.png", cv2.IMREAD_UNCHANGED),
-    "THUMB": cv2.imread("images/thumb.png", cv2.IMREAD_UNCHANGED),
-    "V": cv2.imread("images/v.png", cv2.IMREAD_UNCHANGED)
+    "FIST": cv2.imread(os.path.join(BASE_DIR, "images/fist.png"), cv2.IMREAD_UNCHANGED),
+    "THUMB": cv2.imread(os.path.join(BASE_DIR, "images/thumb.png"), cv2.IMREAD_UNCHANGED),
+    "V": cv2.imread(os.path.join(BASE_DIR, "images/v.png"), cv2.IMREAD_UNCHANGED)
 }
 
 def getGesture(lmList):

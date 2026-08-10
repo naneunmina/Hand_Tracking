@@ -11,10 +11,8 @@ venv/
 .envrc/
 
 .ipynb_checkpoints/
-*.pkl
 *.joblib
 
-dataset/
 data/
 
 .DS_Store
